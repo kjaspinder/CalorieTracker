@@ -1,4 +1,4 @@
-package com.plcoding.mylibrary
+package com.plcoding.core
 
 import org.junit.Test
 
