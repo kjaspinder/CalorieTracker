@@ -1,4 +1,4 @@
-package com.plcoding.navigation
+package com.plcoding.calorytracker.navigation
 
 import androidx.navigation.NavController
 import com.plcoding.core.util.UiEvent
