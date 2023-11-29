@@ -6,11 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.plcoding.calorytracker.navigation.navigate
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.plcoding.core.navigation.Route
-import com.plcoding.calorytracker.navigation.navigate
+import com.plcoding.onbording_presentation.gender.GenderScreen
 import com.plcoding.onbording_presentation.welcome.WelcomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,31 +25,23 @@ class MainActivity : ComponentActivity() {
                         WelcomeScreen(onNavigate = navController::navigate)
                     }
                     composable(Route.AGE) {
-
                     }
                     composable(Route.GENDER) {
-
+                        GenderScreen(onNavigate = navController::navigate)
                     }
                     composable(Route.WEIGHT) {
-
                     }
                     composable(Route.HEIGHT) {
-
                     }
                     composable(Route.NUTRIENT_GOAL) {
-
                     }
                     composable(Route.ACTIVITY) {
-
                     }
                     composable(Route.GOAL) {
-
                     }
                     composable(Route.TRACKER_OVERVIEW) {
-
                     }
                     composable(Route.SEARCH) {
-
                     }
                 }
             }
