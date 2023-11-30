@@ -22,8 +22,8 @@ class DefaultPreferences(
         sharedPref.edit().putFloat(Preferences.KEY_WEIGHT, weight).apply()
     }
 
-    override fun saveHeight(height: Float) {
-        sharedPref.edit().putFloat(Preferences.KEY_HEIGHT, height).apply()
+    override fun saveHeight(height: Int) {
+        sharedPref.edit().putInt(Preferences.KEY_HEIGHT, height).apply()
     }
 
     override fun saveActivityLevel(activityLevel: ActivityLevel) {
@@ -50,7 +50,7 @@ class DefaultPreferences(
         val age = sharedPref.getInt(Preferences.KEY_AGE, 0)
         val genderString = sharedPref.getString(Preferences.KEY_GENDER, "male")
         val weight = sharedPref.getFloat(Preferences.KEY_WEIGHT, -1f)
-        val height = sharedPref.getFloat(Preferences.KEY_HEIGHT, -1f)
+        val height = sharedPref.getInt(Preferences.KEY_HEIGHT, 0)
         val activityLevelString = sharedPref.getString(Preferences.KEY_ACTIVITY_LEVEL, "medium")
         val goalTypeString = sharedPref.getString(Preferences.KEY_GOAL_TYPE, "keep_weight")
         val carbRatio = sharedPref.getFloat(Preferences.KEY_CARBS_RATIO, 1f)
