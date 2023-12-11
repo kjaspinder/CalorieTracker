@@ -8,6 +8,7 @@ data class TrackedFoodEntity(
     val name: String,
     val carbs: Int,
     val fat: Int,
+    val protein: Int,
     val imageUrl: String?,
     val type: String,
     val amount: Int,
