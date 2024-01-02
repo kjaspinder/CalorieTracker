@@ -1,4 +1,5 @@
 plugins {
+    id("org.jetbrains.kotlin.android")
     `android-library`
     `kotlin-android`
 }
@@ -11,4 +12,5 @@ android {
 
 dependencies {
     implementation(project(Modules.core))
+    implementation("androidx.core:core-ktx:+")
 }

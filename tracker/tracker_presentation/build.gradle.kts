@@ -1,4 +1,5 @@
 plugins {
+    id("org.jetbrains.kotlin.android")
     `android-library`
     `kotlin-android`
 }
@@ -15,4 +16,5 @@ dependencies {
     implementation(project(Modules.trackerDomain))
 
     implementation(Coil.coilCompose)
+    implementation("androidx.core:core-ktx:+")
 }

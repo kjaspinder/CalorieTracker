@@ -1,4 +1,5 @@
 plugins {
+    id("org.jetbrains.kotlin.android")
     `android-library`
     `kotlin-android`
 }
@@ -17,6 +18,7 @@ dependencies {
     implementation(Retrofit.retrofit)
     implementation(Retrofit.okHttpLoggingInterceptor)
     implementation(Retrofit.moshiConverter)
+    implementation("androidx.core:core-ktx:+")
 
     "kapt"(Room.roomCompiler)
     implementation(Room.roomRuntime)
